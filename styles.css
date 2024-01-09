@@ -118,7 +118,7 @@ main {
 }
 
 dialog {
-    width: 30%;
+    width: 26em;
     padding: 1em;
     border: none;
     border-radius: 0.5em;
@@ -135,10 +135,41 @@ dialog h1 {
     padding-bottom: 1em;
 }
 
-dialog input {
+dialog input[type=text], dialog input[type=number] {
     border: none;
     background-color: #F0EEF1;
     padding: 1.3em;
+    margin: .5em 0;
     border-radius: 0.4em;
+    width: 23em;
+    font-size: 1em;
+    font-weight: 700;
+    outline: none;
+}
+
+form div {
+    padding: 1em 0;
+}
+
+label {
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button {
+    border: 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1em;
     width: 100%;
+    border-radius: 0.7em;
+    font-size: 1.3em;
+    font-weight: 600;
+    outline: none;
+    transition: 150ms linear;
+}
+
+form button:hover {
+    background-color: #d9d7da;
 }
