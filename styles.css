@@ -55,7 +55,7 @@ main {
 #cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    padding: 0em 7em;
+    padding: 0em 7em 2em 7em;
     gap: 40px;
 }
 
