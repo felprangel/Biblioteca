@@ -46,6 +46,7 @@ main {
     padding: 0.7em 1em;
     border-radius: 0.7em;
     transition: 150ms linear;
+    outline: none;
 }
 
 #button button:hover {
@@ -87,6 +88,7 @@ main {
     border-radius: 0.7em;
     font-size: 1.3em;
     font-weight: 600;
+    outline: none;
 }
 
 .read {
