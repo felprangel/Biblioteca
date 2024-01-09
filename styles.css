@@ -39,7 +39,7 @@ main {
     background-color: #F0EEF1;
     border: 0;
     cursor: pointer;
-    margin: 2em 0;
+    margin: 1.5em 0;
     font-family: 'Poppins', sans-serif;
     font-size: 1.4em;
     font-weight: 600;
@@ -50,4 +50,9 @@ main {
 #button button:hover {
     background-color: #D8D8D8;
     transition: 150ms linear;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
