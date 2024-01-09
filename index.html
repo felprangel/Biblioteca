@@ -17,7 +17,16 @@
             </div>
             <div id="cards">
             </div>
-            <dialog>Teste :)</dialog>
+            <dialog>
+                <form>
+                    <input type="text" name="book_title" placeholder="Título" maxlength="100" required>
+                    <input type="text" name="book_author" placeholder="Autor" maxlength="100" required>
+                    <input type="number" name="book_pages" placeholder="Páginas" min="0" max="10000" required>
+                    <label for="status">Já leu?</label>
+                    <input type="checkbox" name="book_status" id="status">
+                    <button>Submmit</button>
+                </form>
+            </dialog>
         </main>
     </div>
     <script src="./script.js"></script>
