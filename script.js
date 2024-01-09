@@ -1,7 +1,14 @@
 //Adicionar validação se o livro já existe ou não
 //Máximo de 10 mil paginas
 const cards = document.querySelector('#cards')
+const addBook = document.querySelector('#addBook')
+const modal = document.querySelector('dialog')
+
 const library = []
+
+addBook.addEventListener('click', () => {
+    modal.showModal()
+})
 
 function Book(title, author, pages, status){
     this.title = title
