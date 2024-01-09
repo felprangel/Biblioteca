@@ -4,7 +4,6 @@ const cards = document.querySelector('#cards')
 const addBook = document.querySelector('#addBook')
 const modal = document.querySelector('dialog')
 const done = document.querySelector('#done')
-const form = document.querySelector('form')
 
 const library = []
 
@@ -25,16 +24,21 @@ function Book(title, author, pages, status){
 }
 
 done.addEventListener('click', () => {
-    let title = document.querySelector('#book_title').value
-    let author = document.querySelector('#book_author').value
-    let pages = document.querySelector('#book_pages').value
+    let title = document.querySelector('#book_title')
+    let author = document.querySelector('#book_author')
+    let pages = document.querySelector('#book_pages')
     let status = document.querySelector('#status')
 
-    let book = new Book(title, author, pages, status)
+    let book = new Book(title.value, author.value, pages.value, status)
     library.push(book)
     showBooks()
 
-    form.reset()
+    title.value = ''
+    author.value = ''
+    pages.value = ''
+    status.checked = false
+
+    modal.close()
 })
 
 function showBooks(){
