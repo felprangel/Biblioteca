@@ -3,6 +3,8 @@
 const cards = document.querySelector('#cards')
 const addBook = document.querySelector('#addBook')
 const modal = document.querySelector('dialog')
+const done = document.querySelector('#done')
+const form = document.querySelector('form')
 
 const library = []
 
@@ -14,19 +16,29 @@ function Book(title, author, pages, status){
     this.title = title
     this.author = author
     this.pages = pages
-    this.status = status
+
+    if (status.checked === true) {
+        this.status = 'Lido'
+    } else {
+        this.status = 'Não Lido'
+    }
 }
 
-function addBookToLibrary(){
-    const book1 = new Book('O Código Da Vinci', 'Dan Brown', '665', 'Lido')
-    const book2 = new Book('Harry Potter e a Pedra Filosofal', 'J. K. Rowling', '312', 'Não Lido')
-    const book3 = new Book('Dom Quixote', 'Miguel de Cervantes', '1033', 'Lido')
-    library.push(book1)
-    library.push(book2)
-    library.push(book3)
-}
+done.addEventListener('click', () => {
+    let title = document.querySelector('#book_title').value
+    let author = document.querySelector('#book_author').value
+    let pages = document.querySelector('#book_pages').value
+    let status = document.querySelector('#status')
+
+    let book = new Book(title, author, pages, status)
+    library.push(book)
+    showBooks()
+
+    form.reset()
+})
 
 function showBooks(){
+    cards.innerHTML = ''
     for (let i = 0; i < library.length; i++) {
         let card = document.createElement('div')
         card.classList.add('card')
@@ -45,7 +57,7 @@ function showBooks(){
 
         let status = document.createElement('button')
         status.classList.add('read')
-        status.textContent = 'Lido'
+        status.textContent = library[i].status
 
         let remove = document.createElement('button')
         remove.classList.add('remove')
@@ -59,6 +71,3 @@ function showBooks(){
         cards.appendChild(card)
     }
 }
-
-addBookToLibrary()
-showBooks()
