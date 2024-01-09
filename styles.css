@@ -116,3 +116,29 @@ main {
 .remove:hover {
     background-color: #FC3D39;
 }
+
+dialog {
+    width: 30%;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1em rgb(0 0 0 / .4);
+    text-align: center;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .4);
+}
+
+dialog h1 {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+dialog input {
+    border: none;
+    background-color: #F0EEF1;
+    padding: 1.3em;
+    border-radius: 0.4em;
+    width: 100%;
+}
