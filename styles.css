@@ -45,11 +45,11 @@ main {
     font-weight: 600;
     padding: 0.7em 1em;
     border-radius: 0.7em;
+    transition: 150ms linear;
 }
 
 #button button:hover {
     background-color: #D8D8D8;
-    transition: 150ms linear;
 }
 
 #cards {
@@ -67,4 +67,47 @@ main {
     justify-content: center;
     text-align: center;
     border-radius: 0.8em;
+    padding: 1.5em;
+    gap: 15px;
+}
+
+.card h2 {
+    margin: 0;
+}
+
+.card button {
+    border: 0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 0.7em;
+}
+
+.read {
+    background-color: #53D769;
+    transition: 150ms linear;
+}
+
+.read:hover {
+    background-color: #46C263;
+}
+
+.not-read {
+    background-color: #478ECC;
+    transition: 150ms linear;
+}
+
+.not-read:hover {
+    background-color: #3e80b9;
+}
+
+.remove {
+    transition: 150ms linear;
+}
+
+.remove:hover {
+    background-color: #FC3D39;
 }
