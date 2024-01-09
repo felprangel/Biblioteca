@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
     margin: 0;
@@ -27,4 +27,27 @@ header h1 {
 main {
     background-color: #F0EEF1;
     box-shadow: inset 0px 5px 15px -3px rgba(0,0,0,0.1);
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button button {
+    background-color: #F0EEF1;
+    border: 0;
+    cursor: pointer;
+    margin: 2em 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 0.7em 1em;
+    border-radius: 0.7em;
+}
+
+#button button:hover {
+    background-color: #D8D8D8;
+    transition: 150ms linear;
 }
