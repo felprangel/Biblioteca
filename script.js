@@ -5,6 +5,14 @@ const done = document.querySelector('#done')
 
 const library = []
 
+const dismiss = ({target:modal}) => {
+    if (modal.nodeName === 'DIALOG'){
+        modal.close('dismiss')
+    }
+}
+
+modal.addEventListener('click', dismiss)
+
 addBook.addEventListener('click', () => {
     modal.showModal()
 })
