@@ -91,29 +91,30 @@ main {
     outline: none;
 }
 
-.read {
+.card .read {
     background-color: #53D769;
     transition: 150ms linear;
 }
 
-.read:hover {
+.card .read:hover {
     background-color: #46C263;
 }
 
-.not-read {
+.card button {
     background-color: #478ECC;
     transition: 150ms linear;
 }
 
-.not-read:hover {
+.card button:hover {
     background-color: #3e80b9;
 }
 
-.remove {
+.card .remove {
+    background-color: #F0EEF1;
     transition: 150ms linear;
 }
 
-.remove:hover {
+.card .remove:hover {
     background-color: #FC3D39;
 }
 
