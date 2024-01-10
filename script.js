@@ -82,6 +82,12 @@ function showBooks(){
         let remove = document.createElement('button')
         remove.classList.add('remove')
         remove.textContent = 'Remover'
+        remove.setAttribute('data-index', i)
+        remove.addEventListener('click', () => {
+            let index = remove.getAttribute('data-index')
+            library.splice(index, 1)
+            showBooks()
+        })
 
         card.appendChild(title)
         card.appendChild(author)
