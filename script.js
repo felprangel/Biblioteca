@@ -60,8 +60,18 @@ function showBooks(){
         pages.textContent = `${library[i].pages} Páginas`
 
         let status = document.createElement('button')
-        status.classList.add('read')
+        if (library[i].status === 'Lido') {
+            status.classList.add('read')
+        }
         status.textContent = library[i].status
+        status.addEventListener('click', () => {
+            status.classList.toggle('read')
+            if (status.innerText === 'Lido') {
+                status.innerText = 'Não Lido'
+            } else {
+                status.innerText = 'Lido'
+            }
+        })
 
         let remove = document.createElement('button')
         remove.classList.add('remove')
