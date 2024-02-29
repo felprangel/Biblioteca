@@ -5,6 +5,12 @@ const done = document.querySelector('#done')
 
 const library = []
 
+const notas = localStorage.getItem('library')
+if (notas) {
+    library.push(...JSON.parse(notas))
+    showBooks()
+}
+
 const dismiss = ({target:modal}) => {
     if (modal.nodeName === 'DIALOG'){
         modal.close('dismiss')
@@ -37,6 +43,7 @@ done.addEventListener('click', () => {
 
     let book = new Book(title.value, author.value, pages.value, status)
     library.push(book)
+    localStorage.setItem('library', JSON.stringify(library))
     showBooks()
 
     title.value = ''
@@ -86,6 +93,7 @@ function showBooks(){
         remove.addEventListener('click', () => {
             let index = remove.getAttribute('data-index')
             library.splice(index, 1)
+            localStorage.setItem('library', JSON.stringify(library))
             showBooks()
         })
 
