@@ -41,6 +41,25 @@ done.addEventListener('click', () => {
     let pages = document.querySelector('#book_pages')
     let status = document.querySelector('#status')
 
+    title.setCustomValidity('Digite o título do livro')
+    author.setCustomValidity('Digite o autor do livro')
+    pages.setCustomValidity('Digite o número de páginas do livro')
+
+    if (title.validity.valueMissing) {
+        title.reportValidity()
+        return
+    }
+
+    if (author.validity.valueMissing) {
+        author.reportValidity()
+        return
+    }
+
+    if (pages.validity.valueMissing) {
+        pages.reportValidity()
+        return
+    }
+
     let book = new Book(title.value, author.value, pages.value, status)
     library.push(book)
     localStorage.setItem('library', JSON.stringify(library))
