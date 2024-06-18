@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Bibilioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">  
+        <header>
+            <h1>Biblioteca</h1>
+        </header>
+        <main>
+            <div id="button">
+                <button id="addBook">+ Adicionar Livro</button>
+            </div>
+            <div id="cards">
+            </div>
+            <dialog>
+                <form method="dialog">
+                    <h1>Adicionar Livro</h1>
+                    <input type="text" id="book_title" name="book_title" placeholder="Título" maxlength="100" required>
+                    <input type="text" id="book_author" name="book_author" placeholder="Autor" maxlength="100" required>
+                    <input type="number" id="book_pages" name="book_pages" placeholder="Páginas" min="0" max="10000" required>
+                    <div>
+                        <label for="status">Lido?</label>
+                        <input type="checkbox" name="book_status" id="status">
+                    </div>
+                    <button id="done">Pronto!</button>
+                </form>
+            </dialog>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
